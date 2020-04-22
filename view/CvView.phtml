@@ -1,0 +1,47 @@
+<div class="CvView">
+    <article>
+        <div class="details">
+            <h4>Née en 1993</h4>
+            <h4>Vit et travaille à Lyon</h4>
+        </div>
+        <div class="mainDetails Left">
+            <h4>Exposition personnelles</h4>
+                <?php foreach ($cvs as $cv):?>
+                <?php if ($cv['type']==='1'):?>
+                    <h4><?=htmlspecialchars($cv['year'])?></h4>
+                    <p><?=htmlspecialchars($cv['title'])?>,<?=htmlspecialchars($cv['content'])?></p>
+                <?php endif;?>
+                <?php endforeach;?>
+            <h4>Exposition collectives</h4>
+                <?php foreach ($cvs as $cv):?>
+                <?php if ($cv['type']==='2'):?>
+                    <h4><?=htmlspecialchars($cv['year'])?></h4>
+                    <p><?=htmlspecialchars($cv['title'])?>,<?=htmlspecialchars($cv['content'])?></p>
+            <?php endif;?>
+            <?php endforeach;?>
+        </div>
+        <div class="mainDetails right">
+            <h4>Résidence</h4>
+                <?php foreach ($cvs as $cv):?>
+                <?php if ($cv['type']==='3'):?>
+                    <h4><?=htmlspecialchars($cv['year'])?></h4>
+                    <p><?=htmlspecialchars($cv['title'])?>,<?=htmlspecialchars($cv['content'])?></p>
+                <?php endif;?>
+                <?php endforeach;?>
+            <h4>Publications</h4>
+                <?php foreach ($cvs as $cv):?>
+                <?php if ($cv['type']==='4'):?>
+                    <h4><?=htmlspecialchars($cv['year'])?></h4>
+                   <p><?=htmlspecialchars($cv['title'])?>,<?=htmlspecialchars($cv['content'])?></p>
+                <?php endif;?>
+                <?php endforeach;?>
+            <h4>Formation</h4>
+                <?php foreach ($cvs as $cv):?>
+                <?php if ($cv['type']==='5'):?>
+                    <h4><?=htmlspecialchars($cv['year'])?></h4>
+                    <p><?=htmlspecialchars($cv['title'])?>,<?=htmlspecialchars($cv['content'])?></p>
+                <?php endif;?>
+                <?php endforeach;?>
+        </div>
+    </article>
+</div>

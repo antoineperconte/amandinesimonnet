@@ -1,0 +1,41 @@
+@charset "UTF-8";
+@media screen and (min-width: 320px) {
+
+    div.details {
+        font-size: 1.8rem;
+        text-align: center;
+        padding-top: 2rem;
+    }
+
+    div.mainDetails {
+        background-color: #efefef;
+        padding: 2.5rem;
+        max-width: 80%;
+        text-align: left;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+    div.CvView article {
+        padding: 5rem;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+    }
+
+    div h4 {
+        font-size: 1.8rem;
+        text-align: left;
+        margin-right: 3rem;
+    }
+
+    div.CvView div.mainDetails {
+        background-color: #efefef;
+        padding: 5rem;
+        margin: 0;
+        max-width: 38.71%;
+        text-align: left;
+    }
+}

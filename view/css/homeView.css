@@ -1,0 +1,85 @@
+@charset "UTF-8";
+@media screen and (min-width: 320px){
+    /* homeview */
+
+    div.HomeView figure img {
+        margin-top: 2rem;
+        width: 28rem;
+        height: auto;
+    }
+    /*gestion de l'alignement de photo homeview*/
+    div.HomeView {
+        margin-top: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+
+    }
+    /*gras des titres*/
+    div.HomeView figcaption strong {
+        font-family: 'Montserrat-Meduim';
+        text-transform: uppercase;
+    }
+    div.HomeView figure {
+        position: relative;
+    }
+    div.HomeView figure  figcaption {
+        color: white;
+        position: absolute;
+        top: 80%;
+        left: 6%;
+        z-index: 2;
+        background: rgba(0 0 0 1);
+    }
+}
+@media screen and (min-width: 700px){
+    /*homeview */
+    figure {
+        margin: 0;
+        padding: 0;
+    }
+    figure img {
+        margin-right: 3rem;
+        margin-bottom: 3rem;
+        padding: 0;
+        z-index: 1;
+    }
+
+    /* gestion de l'alignement de photo homeview*/
+
+}
+@media screen and (min-width: 1024px){
+    div.Homeview {
+        padding: 0;
+        justify-content: flex-start;
+    }
+    div.HomeView figure figcaption.hidden{
+        display: none;
+    }
+    div.HomeView figure img {
+        max-width: 25rem;
+        margin: 0;
+        padding: 1rem 1rem 1rem 0rem;
+    }
+    div.HomeView figure:hover figcaption.hidden{
+        display: inline;
+    }
+    div.HomeView figure {
+        position: relative;
+    }
+
+    div.HomeView figure:hover img{
+        filter: brightness(32%);
+        opacity: 0.8;
+        z-index: 0;
+    }
+    div.HomeView figure  figcaption {
+        color: white;
+        position: absolute;
+        top: 80%;
+        left: 6%;
+        z-index: 2;
+        background: rgba(0 0 0 1);
+    }
+}
+

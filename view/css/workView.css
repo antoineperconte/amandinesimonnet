@@ -1,0 +1,282 @@
+@charset "UTF-8";
+/*TODO ASIDE CONTENT FLEX BUG*/
+/*WorkView*****/
+/*Version Mobile de 320 px à 700px*/
+@media screen and (min-width: 320px) {
+    /*instruction general du div wrap de la page WorkView*/
+    div.workView {
+        margin-top: 5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 1.7rem;
+    }
+
+    /*gestion du contenu principale du carrousel*/
+    figure.fullCarousel {
+        background-color: #efefef;
+        margin: 1rem 0;
+    }
+
+    figure.fullCarousel img.mainImage {
+        max-width: 90%;
+        padding-top: 2rem;
+    }
+
+    figure.fullCarousel figcaption {
+        padding: 1rem;
+    }
+
+    figure.fullCarousel figcaption strong {
+        font-weight: 700;
+    }
+
+    /*gestion des img contenu sous le carousel*/
+    div.sliderScheme {
+        background-color: #efefef;
+        padding: 1rem;
+        margin: 0 auto;
+
+    }
+    div.sliderScheme figure {
+        margin: 0;
+    }
+
+    /*redimension des imgs contenu sous le carrousel*/
+    div.sliderScheme img {
+        margin-left: 0.2rem;
+        width: 5rem;
+        height: 4rem; 
+        margin-bottom: 0.2rem;
+    }
+    div.workView div.asideContent div.sliderScheme {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 90%;
+    }
+
+
+    /*dimension du bas de page contenant les articles*/
+    article.content {
+        text-align: left;
+    }
+
+    /*gestion des titres*/
+    h3 {
+        font-size: 2.1rem;
+        width: 45%;
+    
+    }
+    h3 a {
+        text-decoration: none;
+        color: black;
+    }
+    div.workView div.asideContent h4
+    {
+        line-height: 0.5rem;
+        font-size: 2.3rem;
+    }
+
+   div.workView div.asideContent strong {
+        font-size: 1.8rem;
+        font-family: 'Montserrat-Meduim';
+    }
+
+    /*mise en place de la liste de toutes les oeuvres*/
+    /*text détails oeuvre*/
+    .asideContent h3 {
+        width: inherit;
+        text-align: center;
+    }
+    .asideContent h4 {
+        width: inherit;
+        text-align: center;
+    }
+
+    /*titre des travaux et travaux*/
+
+    h3.workTitle a{
+        margin-top: 1rem;
+        padding-left: 0.5rem;
+        padding-right: 120%;
+    }
+    h3.workTitle{
+        background-color: #efefef;
+        padding: 1rem;
+        width: 100%;   
+    }
+    ul {
+        display: inline-block;
+    }
+    li {
+        text-align: center;
+    }
+ 
+    ul {
+        padding: 1rem;
+    }
+
+    li {
+        list-style-type: none;
+        padding-bottom:0.5rem;
+    }
+    article.work li a {
+        text-transform: uppercase;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+
+/*bouton de défilement*/
+     div.workView #slider img.next {
+        display: none;
+    }
+
+    div.workView #slider img.back {
+        display: none;
+    } 
+}
+/***************************************************************************************************/
+/*!*version tablette HomeView a partir de 700 px*!*/
+/*TODO VERSION TABLETTE BUG*/
+@media screen and (min-width: 700px) {
+    div.workView {
+        margin: 0 auto;
+    }
+
+/*carousel du centre de la page*/
+    figure.fullCarousel {
+        display: inline-block;
+        min-width: 50%;
+        padding: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    figure.fullCarousel img.mainImage {
+        margin: 0;
+    }
+
+    figure.fullCarousel figcaption {
+        display: block;
+    }
+
+/*vignette du carousel*/
+    div.asideContent {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-left: 0;
+    }
+
+}
+/***********************************************************************************************/
+@media screen and (min-width: 1020px) {
+    /*affichage taille pc*/
+    div.workView {
+        display: flex;
+        justify-content: space-between;
+    }
+/*position de la liste travaux*/
+    div.workView .work:nth-child(3) {
+        order: -1;
+    }
+
+/*position du carousel*/
+    figure.fullCarousel {
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: space-between; */
+        width: 106rem!important;
+        margin: 0 3rem;
+        height: 65rem;
+    }
+
+/*taille de l'image principale*/
+    figure.fullCarousel img.mainImage {
+        object-fit: contain;
+        margin: 0 auto!important;
+        width: auto;
+        max-height: 57rem;
+    }
+        
+/*figcaption de l'image principalle*/
+figcaption.visible {
+    text-align: left;
+    margin: inherit;   
+    width: 100%;
+}
+/*titre asideConstent*/
+div.asideContent h3 {
+    text-align: left;
+}
+div.asideContent h4 {
+    text-align: left;
+}
+/*vignette*/
+div.workView div.asideContent {
+    width: 20%;;
+    height: 65rem;
+}
+div.workView div.asideContent div.sliderScheme figure{
+    padding: 0 0.5rem;
+}
+
+div.workView div.asideContent div.sliderScheme img {
+    margin: 0;
+}
+    div.workView div.asideContent {
+        font-size: 1.3rem;
+        margin-left: 5px;
+    }
+    div.workView div.asideContent strong {
+        font-size: 1.4rem;
+    }
+    div.workView div.asideContent div.sliderScheme {
+        max-width: max-content;
+        justify-content: initial;
+        
+    }
+    
+
+/*article travaux*/
+article.work h3.workTitle {
+    padding: 1rem 15.3rem 1rem 1rem;
+}
+article.work {
+        width: 12%;
+        margin : 0;
+}
+    article.work h3 {
+        margin: 0;
+    }
+    /*marge du contenu travaux*/
+    div.workView article.work ul {
+        padding: 0;
+        font-size: 1.4rem;
+    }
+    div.workView article.work li {
+        margin-bottom: 0.5rem;
+        text-align: left;
+    }
+   div.workView article.work li a:hover{
+        font-family: 'Montserrat-Meduim';
+    }
+    /**chevron du slider**/
+
+    div.workView #slider:hover img.next {
+        display: block;
+        align-self: center;
+        margin: 0;
+    }
+
+    div.workView #slider:hover img.back {
+        display: block;   
+        justify-self: flex-start;
+        align-self: center;
+        margin: 0;
+    }
+    div.workView figure figcaption strong{
+        font-weight: 700;
+        
+    }
+
+}

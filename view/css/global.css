@@ -1,0 +1,169 @@
+@charset "UTF-8";
+/* css global à tout le site */
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%; /* ajustement de la police 62.5% de 16px = 10 px */
+}
+@font-face {
+	font-family: 'Montserrat-ExtraLight';
+    src: url('font/Montserrat-ExtraLight.ttf');
+}
+@font-face {
+	font-family: 'Montserrat-Meduim';
+    src: url('font/Montserrat-Medium.ttf');
+}
+/*definition des normes du body*/
+body {
+    font-family: 'Montserrat-ExtraLight', sans-serif;
+    text-align: center;
+}
+a {
+    color: black;
+    text-decoration: none;
+    padding: 0.2rem;
+}
+/*Version Mobile  320 px */
+@media screen and (min-width: 320px) {
+    /* definition des blocks géneraux */
+    body {
+        max-width: 84%;
+        font-size: 1.4rem;
+        font-weight: lighter;
+        margin: 0 auto;
+    }
+    header {
+        width: 100%;
+        height: 30rem;
+        margin-right: 3%;
+        margin-left: 3%;
+        position: relative;
+        text-align: center;
+    }
+    
+
+    /*definition du div event*/
+    div.event {
+        background-color: rgba(239, 239, 239, 0.33);
+        width: 100%;
+        position: absolute;
+        bottom: 30%;
+        left: 0;
+        padding-left: 5.99%;
+        padding-right: 5.99%;
+        text-align: left;
+    }
+    .event p {
+        margin-top: 0;
+    }
+    footer h4{
+        text-align: center;
+        margin-top: 3rem;
+        font-size:2rem;
+    }
+    strong {
+        font-weight: 300;
+    }
+    .hide {
+        display: none;
+    }  
+    /*apparence des titres du header*/
+   header h1 {
+        margin-bottom: 0.2rem;
+    }
+    h1 a {
+        font-size: 3rem;
+        font-weight: 1;
+
+    }
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 200;
+        margin:0;
+        margin-bottom: 4rem;
+    }
+
+    /*apparence de la nav header*/
+    nav {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    nav a {
+        font-size: 2.3rem;
+        text-align: center;
+    }
+
+}
+/*!*version tablette HomeView a partir de 700 px*!*/
+@media (min-width: 700px) {
+    body{
+        margin: 0.5% auto;
+    }
+    nav {
+        display: block !important;
+    }
+    header h1{
+        text-align: left;
+    }
+    header h2 {
+        text-align: left;
+    }
+    header {
+        height: 25rem;
+    }
+
+    nav a {
+        border-right: 0.3rem solid black;
+        padding-right: 1rem;
+    }
+
+    nav a:last-child {
+        border-right: none;
+    }
+    footer{
+        min-width: 80%;
+        margin: 0 auto;
+    }
+}
+/*version pc min-width 1024px*/
+@media (min-width: 1024px) {
+    /*    definition des blocks géneraux */
+    body {
+        margin: 0 auto;
+        font-weight: 100;
+    }
+    header {
+        height: 20rem;
+        text-align: left;
+        margin : 0;
+    }
+    /*    definition du div event*/
+    div.event {
+        background-color: rgba(239, 239, 239, 0.63);
+        width: 110%;
+        position: fixed;
+        bottom: 0;
+    }
+    /* placement du nav*/
+    header nav{
+        padding-right: 1rem;
+    }
+    /*    apparence des titres du header*/
+    h2 {
+        font-size: 2.3rem;
+    }
+    footer{
+        min-width: 80%;
+        margin-bottom: 5rem;
+    }
+    header nav a:hover{
+        font-family: 'Montserrat-Meduim';
+    }
+}
+
+
+

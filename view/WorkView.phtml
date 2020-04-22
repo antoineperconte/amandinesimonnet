@@ -1,0 +1,39 @@
+<div class="workView">
+    <figure id="slider" class="fullCarousel">
+        <img src="../view/fontawe/chevron-left-solid.svg" width="10"
+             height="20" alt="back" title="back" class="back">
+        <img src="<?= htmlspecialchars($path) ?><?= htmlspecialchars($projectMainData['mainPicture']) ?>"
+             title="<?= htmlspecialchars($projectMainData['projectTitle']) ?>"
+             alt="<?= htmlspecialchars($projectMainData['projectTitle']) ?>" width="" height="" class="mainImage"/>
+        <img src="../view/fontawe/chevron-right-solid.svg" width="10"
+             height="20" alt="next" title="next" class="next">
+        <figcaption class="visible">
+            <strong class="true"><?= htmlspecialchars($projectMainData['projectTitle']) ?></strong>, <em> <?= htmlspecialchars($projectMainData['projectYear']) ?>, <?= htmlspecialchars($projectMainData['text']) ?></em>
+        </figcaption>
+    </figure>
+    <div class="asideContent">
+        <div class="sliderScheme">
+            <?php foreach ($projectPictures as $projectPicture): ?>
+            <figure id="asideImages">
+                <img src="<?= htmlspecialchars($path) ?><?= htmlspecialchars($projectPicture['url']) ?>"
+                     alt="<?= ($projectPicture['title']) ?>"
+                     title="<?= ($projectPicture['title']) ?>"
+                     width="" height="" >
+                <figcaption class="hide"><strong><?= htmlspecialchars($projectPicture['title'])?></strong>, <em><?= htmlspecialchars($projectPicture['date'])?>, <?= htmlspecialchars($projectPicture['other'])?></em></figcaption>
+            </figure>
+            <?php endforeach; ?>
+        </div>
+        <article class="content">
+            <p class="sideText"><?=(html_entity_decode($projectMainData['sideText']))?></p>
+        </article>
+    </div>
+    <article class="work">
+        <h3 class="workTitle">Travaux</h3>
+        <ul>
+            <?php foreach ($projectTitles as $projectTitle): ?>
+                <li><a href= "work.php<?=htmlspecialchars("?id=".($projectTitle['id'])) ?>"> <?= htmlspecialchars($projectTitle['projectTitle']) ?></a></li>
+            <?php endforeach; ?>
+        </ul>
+    </article>
+    <script src="../view/javascript/slider.js"></script>
+</div>

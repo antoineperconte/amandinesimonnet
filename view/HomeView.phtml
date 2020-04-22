@@ -1,0 +1,11 @@
+<div class="HomeView">
+    <?php foreach ($projects as $project): ?>
+        <a href="work.php?id=<?=htmlspecialchars($project['id'])?>">
+        <figure>
+            <figcaption class="hidden"><strong><?=htmlspecialchars($project['projectTitle'])?></strong>, <?= intval(($project['projectYear']))?></figcaption>
+            <img src="<?=htmlspecialchars($path)?><?=htmlspecialchars($project['mainPicture']) ?>" title="<?=htmlspecialchars($project['projectTitle'])?>"
+                 alt="<?=htmlspecialchars($project['projectTitle']) ?>" width="" height=""/>
+        </figure>
+        </a>
+    <?php endforeach; ?>
+</div>
